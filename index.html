@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DN-AIDT</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="controller">
+        <div class="tabs">
+          <button class="tab-button active" data-tab="tab1">Image Split</button>
+          <button class="tab-button" data-tab="tab2">Quize Json</button>
+          <button class="tab-button" data-tab="tab3">Audio Maker</button>
+        </div>
+        <div id="tab1" class="tab-content active">
+          <h1>Aidt-Content Image Split Data</h1>
+          <form id="form-img-split">
+            <label for="baseDir">aidt-contents Git Local 경로:</label>
+            <input
+              type="text"
+              id="baseDir"
+              name="baseDir"
+              placeholder="Enter base directory"
+              required
+            />
+            <label for="author">저자:</label>
+            <select id="author" name="author" required>
+              <option value="lee">이동환</option>
+              <option value="kim">김태은</option>
+              <option value="ham">함순애</option>
+            </select>
+
+            <label for="grade">학년:</label>
+            <select id="grade" name="grade" required>
+              <option value="3">3학년</option>
+              <option value="4">4학년</option>
+            </select>
+
+            <button type="submit">생성시작</button>
+          </form>
+        </div>
+        <div id="tab2" class="tab-content">
+          <h1>Aidt-Content Quize Json</h1>
+          <form id="form-quiz">
+            <label for="basePath">aidt-contents Git Local 경로:</label>
+            <input
+              type="text"
+              id="basePath"
+              name="basePath"
+              placeholder="Enter base directory"
+              required
+            />
+            <label for="file">Exel 파일 Import</label>
+            <input
+              type="file"
+              id="file"
+              name="file"
+              placeholder="Enter base file"
+              required
+            />
+            <button type="submit">생성시작</button>
+          </form>
+        </div>
+
+        <div id="tab3" class="tab-content">
+          <h1>Aidt-Content Audio Maker</h1>
+          <form id="form-audio-maker">
+            <label for="basePath">aidt-contents Git Local 경로:</label>
+            <input
+              type="text"
+              id="basePath"
+              name="basePath"
+              placeholder="Enter base directory"
+              required
+            />
+            <label for="destPath">결과물 저장 경로:</label>
+            <input
+              type="text"
+              id="destPath"
+              name="destPath"
+              placeholder="Enter base directory"
+              required
+            />
+            <label for="author">저자:</label>
+            <select id="author" name="author" required>
+              <option value="lee">이동환</option>
+              <option value="kim">김태은</option>
+              <option value="ham">함순애</option>
+            </select>
+
+            <label for="grade">학년:</label>
+            <select id="grade" name="grade" required>
+              <option value="3">3학년</option>
+              <option value="4">4학년</option>
+            </select>
+
+            <button type="submit">생성시작</button>
+          </form>
+        </div>
+      </section>
+      <div class="vertical-line"></div>
+      <section class="msg">
+        <div>내역</div>
+        <div id="message"></div>
+      </section>
+    </div>
+
+    <div class="spinner-overlay" id="spinner-overlay">
+      <div class="spinner"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+    <script src="js/tab.js"></script>
+  </body>
+</html>
